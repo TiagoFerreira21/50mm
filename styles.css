@@ -1,0 +1,44 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Gallery Container */
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto; /* Centered with margin */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Individual Photo Container */
+.photo {
+    position: relative;
+    overflow: hidden; /* Ensures images stay within bounds */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling */
+.photo img {
+    width: 100%; /* Full width within the container */
+    height: auto; /* Preserve aspect ratio */
+    display: block; /* Avoid inline spacing issues */
+}
+
+/* Description Styling */
+.photo .description {
+    padding: 10px; /* Space inside the description box */
+    background-color: #fff; /* White background for contrast */
+    text-align: center; /* Center align the text */
+    font-size: 14px; /* Slightly smaller font for descriptions */
+    color: #333; /* Dark gray text for readability */
+}

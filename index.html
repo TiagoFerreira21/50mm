@@ -3,50 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Photo Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .gallery {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .photo {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .photo img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .photo .description {
-            padding: 10px;
-            background-color: #fff;
-            text-align: center;
-        }
-    </style>
+    <title>50mm</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="gallery">
-        <!-- Add photos here -->
-        <div class="photo">
-            <img src="photo1.jpg" alt="Photo 1">
-            <div class="description">Description for Photo 1</div>
-        </div>
+        <!-- Images and descriptions will be dynamically inserted -->
     </div>
+    <script>
+        const photos = [
+            { src: 'images/symmetry.jpg', description: 'symmetry; (noun): beauty of form arising from balanced proportions' },
+            { src: 'images/hall.jpg', description: 'hall; (noun): a corridor or passage in a building' },
+            { src: 'images/decay.jpg', description: 'decay; (noun): the state or process of rotting or decomposition' },
+            { src: 'images/pillar.jpg', description: 'pillar; (noun): a tall vertical structure of stone, wood, or metal, used as a support or decoration' },
+            { src: 'images/summit.jpg', description: 'summit; (noun): the highest point of a hill or mountain' },
+            { src: 'images/surfer.jpg', description: 'surfer; (noun): a person who rides a wave on a board' },
+            { src: 'images/tree.jpg', description: 'tree; (noun): a woody perennial plant, typically having a single stem or trunk' },
+            { src: 'images/trunk.jpg', description: 'trunk; (noun): the main woody stem of a tree' },
+            { src: 'images/railway.jpg', description: 'railway; (noun): a track made of steel rails along which trains run' },
+            { src: 'images/creek.jpg', description: 'creek; (noun): a small stream of water' },
+            { src: 'images/cloudy.jpg', description: 'cloudy; (adjective): covered with clouds; overcast' },
+            { src: 'images/alley.jpg', description: 'alley; (noun): a narrow passageway between buildings' }
+        ];
+
+        const gallery = document.querySelector('.gallery');
+
+        // Clear the gallery first to ensure no duplication
+        gallery.innerHTML = '';
+
+        photos.forEach(photo => {
+            const photoDiv = document.createElement('div');
+            photoDiv.className = 'photo';
+
+            const img = document.createElement('img');
+            img.src = photo.src;
+            img.alt = photo.description;
+
+            const description = document.createElement('div');
+            description.className = 'description';
+            description.textContent = photo.description;
+
+            photoDiv.appendChild(img);
+            photoDiv.appendChild(description);
+            gallery.appendChild(photoDiv);
+        });
+    </script>
 </body>
 </html>
