@@ -3,50 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>50mm</title>
+    <title>50mm Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="gallery">
-        <!-- Images and descriptions will be dynamically inserted -->
+        <!-- Favorites -->
+        <div class="photo favorites">
+            <img src="images/symmetry.jpg" alt="Symmetry">
+            <div class="description">Symmetry; (noun): beauty of form arising from balanced proportions.</div>
+        </div>
+        <div class="photo favorites">
+            <img src="images/hall.jpg" alt="Hall">
+            <div class="description">Hall; (noun): a corridor or passage in a building.</div>
+        </div>
+
+        <!-- Non-Favorites -->
+        <div class="photo non-favorites">
+            <img src="images/decay.jpg" alt="Decay">
+            <div class="description">Decay; (noun): the process of gradually becoming inferior or worse.</div>
+        </div>
+        <div class="photo non-favorites">
+            <img src="images/alley.jpg" alt="Alley">
+            <div class="description">Alley; (noun): a narrow passage between or behind buildings.</div>
+        </div>
+        <div class="photo non-favorites">
+            <img src="images/railway.jpg" alt="Railway">
+            <div class="description">Railway; (noun): a network of tracks for trains to travel on.</div>
+        </div>
+        <div class="photo non-favorites">
+            <img src="images/creek.jpg" alt="Creek">
+            <div class="description">Creek; (noun): a small stream or minor tributary of a river.</div>
+        </div>
+        <div class="photo non-favorites">
+            <img src="images/trunk.jpg" alt="Trunk">
+            <div class="description">Trunk; (noun): the main woody stem of a tree.</div>
+        </div>
+        <div class="photo non-favorites">
+            <img src="images/tree.jpg" alt="Tree">
+            <div class="description">Tree; (noun): a woody perennial plant with a single stem or trunk.</div>
+        </div>
+
+        <!-- Favorites -->
+        <div class="photo favorites">
+            <img src="images/pillar.jpg" alt="Pillars">
+            <div class="description">Pillars; (noun): tall vertical structures used for support or decoration.</div>
+        </div>
+        <div class="photo favorites">
+            <img src="images/cloudy.jpg" alt="Cloudy">
+            <div class="description">Cloudy; (adjective): overcast with clouds, dim or obscure.</div>
+        </div>
+        <div class="photo favorites">
+            <img src="images/summit.jpg" alt="Summit">
+            <div class="description">Summit; (noun): the highest point of a hill or mountain.</div>
+        </div>
+        <div class="photo favorites">
+            <img src="images/surfer.jpg" alt="Surfer">
+            <div class="description">Surfer; (noun): a person who rides on waves while standing or lying on a surfboard.</div>
+        </div>
     </div>
-    <script>
-        const photos = [
-            { src: 'images/symmetry.jpg', description: 'symmetry; (noun): beauty of form arising from balanced proportions' },
-            { src: 'images/hall.jpg', description: 'hall; (noun): a corridor or passage in a building' },
-            { src: 'images/decay.jpg', description: 'decay; (noun): the state or process of rotting or decomposition' },
-            { src: 'images/pillar.jpg', description: 'pillar; (noun): a tall vertical structure of stone, wood, or metal, used as a support or decoration' },
-            { src: 'images/summit.jpg', description: 'summit; (noun): the highest point of a hill or mountain' },
-            { src: 'images/surfer.jpg', description: 'surfer; (noun): a person who rides a wave on a board' },
-            { src: 'images/tree.jpg', description: 'tree; (noun): a woody perennial plant, typically having a single stem or trunk' },
-            { src: 'images/trunk.jpg', description: 'trunk; (noun): the main woody stem of a tree' },
-            { src: 'images/railway.jpg', description: 'railway; (noun): a track made of steel rails along which trains run' },
-            { src: 'images/creek.jpg', description: 'creek; (noun): a small stream of water' },
-            { src: 'images/cloudy.jpg', description: 'cloudy; (adjective): covered with clouds; overcast' },
-            { src: 'images/alley.jpg', description: 'alley; (noun): a narrow passageway between buildings' }
-        ];
-
-        const gallery = document.querySelector('.gallery');
-
-        // Clear the gallery first to ensure no duplication
-        gallery.innerHTML = '';
-
-        photos.forEach(photo => {
-            const photoDiv = document.createElement('div');
-            photoDiv.className = 'photo';
-
-            const img = document.createElement('img');
-            img.src = photo.src;
-            img.alt = photo.description;
-
-            const description = document.createElement('div');
-            description.className = 'description';
-            description.textContent = photo.description;
-
-            photoDiv.appendChild(img);
-            photoDiv.appendChild(description);
-            gallery.appendChild(photoDiv);
-        });
-    </script>
 </body>
 </html>
