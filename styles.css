@@ -60,3 +60,11 @@ body {
         width: 100%;
     }
 }
+.clickable {
+    cursor: pointer; /* Changes cursor to a pointer to indicate interactivity */
+    transition: transform 0.3s ease;
+}
+
+.clickable:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
