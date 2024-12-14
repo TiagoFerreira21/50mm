@@ -1,0 +1,71 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000A26;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.photo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.photo .description {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: left;
+    -webkit-text-fill-color: beige;
+}
+
+/* Favorites */
+.favorites {
+    width: calc(50% - 8px);
+    max-width: 600px;
+}
+
+.non-favorites {
+    width: calc(33.333% - 11px);
+    max-width: 400px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .favorites {
+        width: 100%;
+    }
+    .non-favorites {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .non-favorites {
+        width: 100%;
+    }
+}
+.clickable {
+    cursor: pointer; /* Changes cursor to a pointer to indicate interactivity */
+    transition: transform 0.3s ease;
+}
+
+.clickable:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}

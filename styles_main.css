@@ -1,0 +1,124 @@
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif, ;
+    background-color: #000A26; /* Navy blue */
+    color: #F5F5DC; /* Pastel beige */
+}
+
+header {
+    background-color: #000A26; /* Solid navy blue */
+    padding: 1rem 0;
+    border-bottom: 2px solid #F5F5DC;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.collections-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.collections-nav a {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.collections-nav a:hover {
+    color: #EAE0C8;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.collection-preview {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.collection-preview img {
+    width:100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    color: #F5F5DC;
+    opacity: 0;
+}
+
+.collection-preview:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.overlay button {
+    background-color: #F5F5DC;
+    color: #000A26;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+    background-color: #EAE0C8;
+}
+#main-title {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+nav {
+    display: inline-block;
+}
+
+.collection-title {
+    margin-left: 20px;
+    font-size: 1em;
+    text-align: center;
+}
