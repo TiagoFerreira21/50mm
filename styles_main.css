@@ -13,7 +13,23 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
+/* Header Styles */
+.header-nav {
+    display: flex; /* Makes links appear horizontally */
+    justify-content: center; /* Centers links horizontally */
+    gap: 50px; /* Adds space between the links */
+    background-color: #000A26; /* Matches your theme */
+    padding: 10px 0; /* Adds vertical padding */
+  }
+  
+  .nav-link {
+    text-decoration: none; /* Removes underline */
+    color: #F5F5DC; /* Link text color */
+    border-radius: 5px; /* Slightly rounded edges */
+    transition: background-color 0.3s ease;
+  }
 
 .header-container {
     display: flex;
@@ -27,18 +43,7 @@ header {
     margin-bottom: 0.5rem;
 }
 
-.collections-nav {
-    display: flex;
-    gap: 2rem;
-}
 
-.collections-nav a {
-    text-decoration: none;
-    color: #F5F5DC;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
 
 .collections-nav a:hover {
     color: #EAE0C8;
@@ -57,8 +62,10 @@ main {
     width: 90%;
     max-width: 1200px;
     overflow: hidden;
-    border-radius: 10px;
     margin: 0 auto;
+    border: none; /* Remove border/frame look */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Floating effect */
+    border-radius: 5px; /* Slightly rounded corners */
 }
 
 .collection-preview img {
